@@ -22,6 +22,7 @@ namespace WinTail
                 return;
             }
 
+            Console.WriteLine("you said: '{0}'", message);
             // if message has even # characters, display in red; else, green
             var even = msg.Length % 2 == 0;
             var color = even ? ConsoleColor.Red : ConsoleColor.Green;
@@ -29,7 +30,6 @@ namespace WinTail
             Console.ForegroundColor = color;
             Console.WriteLine(alert);
             Console.ResetColor();
-
         }
     }
 }
